@@ -9,6 +9,7 @@ Bu proje, iki farklı tarihte çekilmiş görüntüleri yan yana kaydırmalı (s
 
 ## Deploy / Canlı Link
 
+https://image-comparison.streamlit.app
 
 ## Lokal olarak çalıştırma (macOS / zsh)
 Aşağıdaki adımlar, projeyi yerel makinenizde çalıştırmak için yeterlidir.
