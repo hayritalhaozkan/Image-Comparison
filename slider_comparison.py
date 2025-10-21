@@ -4,11 +4,11 @@ from streamlit_image_comparison import image_comparison
 from PIL import Image
 
 st.set_page_config(page_title="SAR Image Comparison", layout="wide")
-st.title("🛰️ SAR Image Comparison")
+st.title("Image Comparison")
 
 st.markdown(
     """
-    This tool allows you to compare SAR images taken on two different dates by sliding the mouse.
+    This tool allows you to compare images taken on two different dates by sliding the mouse.
     The **left** image represents the earlier period, and the **right** image represents the later period.
     """
 )
@@ -24,9 +24,9 @@ custom_label2 = st.sidebar.text_input("Right Image Label:", value=label2_default
 # Upload images
 col1, col2 = st.columns(2)
 with col1:
-    uploaded_img1 = st.file_uploader("📂 Upload First SAR Image ", type=["png", "jpg", "jpeg", "tif", "tiff"])
+    uploaded_img1 = st.file_uploader("📂 Upload First Image ", type=["png", "jpg", "jpeg", "tif", "tiff"])
 with col2:
-    uploaded_img2 = st.file_uploader("📂 Upload Second SAR Image ", type=["png", "jpg", "jpeg", "tif", "tiff"])
+    uploaded_img2 = st.file_uploader("📂 Upload Second Image ", type=["png", "jpg", "jpeg", "tif", "tiff"])
 
 # Show comparison slider if images are uploaded
 if uploaded_img1 and uploaded_img2:
@@ -49,4 +49,4 @@ if uploaded_img1 and uploaded_img2:
         st.error(f"An error occurred while processing the image: {e}")
         st.warning("Please ensure you have uploaded valid image files.")
 else:
-    st.info("Start by uploading two SAR images.")
+    st.info("Start by uploading two images.")
